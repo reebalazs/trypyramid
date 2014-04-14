@@ -1,22 +1,38 @@
-.. UsePyramid documentation master file, created by
-   sphinx-quickstart on Mon Apr 14 16:00:34 2014.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+===========
+Use Pyramid
+===========
 
-Welcome to UsePyramid's documentation!
-======================================
+Install
+-------
+If you don't have the latest and greatest Python 3 install it from `Python.org <https://www.python.org/downloads/>`_ 
 
-Contents:
+In a terminal::
 
-.. toctree::
-   :maxdepth: 2
+  $ pyvenv myproject
+  $ cd myproject
+  $ bin/pip install pyramid
 
+Create Application
+------------------
 
+Open `app.py` in your editor::
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
+  from pyramid.config import Configurator
+  from pyramid.response import Response
+  
+  from wsgiref.simple_server import make_server
+  
+  def hello_world(request):
+      return Response('Hello %(name)s!' % request.matchdict)
+  
+  def create_app():
+      config = Configurator()
+      config.add_route('hello', '/hello/{name}')
+      config.add_view(hello_world, route_name='hello')
+      app = config.make_wsgi_app()
+      return app
+  
+  if __name__ == '__main__':
+      app = create_app()
+      server = make_server('0.0.0.0', 8080, app)
+      server.serve_forever()
