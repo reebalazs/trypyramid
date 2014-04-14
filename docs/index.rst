@@ -2,6 +2,8 @@
 Pyramid is Easy and Fun
 #######################
 
+Pyramid is super easy to setup and use. Let's do a minimal app using Python 3.
+
 Install Python
 --------------
 
@@ -16,7 +18,7 @@ Open a terminal::
 
   pyvenv myproject
   cd myproject
-  bin/pip install pyramid
+  bin/pip install pyramid waitress
 
 
 Create Your First App
@@ -28,7 +30,7 @@ Open `app.py` in your editor
 
   from pyramid.config import Configurator
   from pyramid.response import Response
-  from wsgiref.simple_server import make_server
+  from waitress import serve
 
   def hello_world(request):
       return Response('Hello world!')
@@ -41,13 +43,9 @@ Open `app.py` in your editor
       app = config.make_wsgi_app()
       return app
 
-  def serve_app():
-      app = create_app()
-      server = make_server('0.0.0.0', 8080, app)
-      server.serve_forever()
-
   if __name__ == '__main__':
-      serve_app()
+      app = create_app()
+      serve(app)
 
 
 Run Your App
@@ -55,4 +53,4 @@ Run Your App
 
 .. code-block:: bash
 
-  python app.py
+  bin/python app.py
