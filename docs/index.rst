@@ -2,23 +2,25 @@
 Pyramid is Easy and Fun
 #######################
 
-1. Install Python
------------------
+Install Python
+--------------
 
 If you don't have the latest and greatest **Python 3** install it from
 `Python.org <https://www.python.org/downloads/>`_
 
-2. Install Pyramid
-------------------
+
+Install Pyramid
+---------------
 
 Open a terminal::
 
-  $ pyvenv myproject
-  $ cd myproject
-  $ bin/pip install pyramid
+  pyvenv myproject
+  cd myproject
+  bin/pip install pyramid
 
-3. Create Your First App
-------------------------
+
+Create Your First App
+---------------------
 
 Open `app.py` in your editor
 
@@ -47,4 +49,10 @@ Open `app.py` in your editor
   if __name__ == '__main__':
       serve_app()
 
-4. Run Your App
+
+Run Your App
+---------------
+
+.. code-block:: bash
+
+  python app.py
