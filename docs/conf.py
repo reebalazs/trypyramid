@@ -15,6 +15,9 @@
 import sys
 import os
 
+# add the themes path
+sys.path.append(os.path.abspath('_themes'))
+
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -71,7 +74,7 @@ release = '0.1'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build']
+exclude_patterns = ['_build', '_themes/README.rst',]
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
@@ -110,7 +113,7 @@ html_theme = 'pyramid'
 #html_theme_options = {}
 
 # Add any paths that contain custom themes here, relative to this directory.
-#html_theme_path = []
+html_theme_path = ['_themes']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
