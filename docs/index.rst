@@ -49,8 +49,14 @@ Open `app.py` in your editor
 
 
 Run Your App
----------------
+------------
 
 .. code-block:: bash
 
   bin/python app.py
+
+
+Open The App in a Browser
+-------------------------
+
+http://0.0.0.0:8080
