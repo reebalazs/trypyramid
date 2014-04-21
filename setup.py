@@ -16,24 +16,24 @@ except IOError:
 
 def main():
     setup(
-        name='usepyramid',
+        name='trypyramid',
         version='0.1',
-        description='UsePyramid',
+        description='TryPyramid',
         long_description=README + '\n\n' +  CHANGES,
         author='Pylons Project',
         author_email='@',
-        url='https://github.com/goodwillcoding/usepyramid',
+        url='https://github.com/goodwillcoding/trypyramid',
         packages=[
-            'usepyramid',
+            'trypyramid',
         ],
-        package_dir={'usepyramid': 'usepyramid'},
+        package_dir={'trypyramid': 'trypyramid'},
         include_package_data=True,
         install_requires=[
             'sphinx'
         ],
         license="BSD",
         zip_safe=False,
-        keywords='usepyramid',
+        keywords='trypyramid',
         classifiers=[
             'Development Status :: 2 - Pre-Alpha',
             'Intended Audience :: Developers',

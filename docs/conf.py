@@ -50,7 +50,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'UsePyramid'
+project = u'TryPyramid'
 copyright = u'2014, Pylons Project'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -183,7 +183,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'UsePyramiddoc'
+htmlhelp_basename = 'TryPyramiddoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -203,7 +203,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'UsePyramid.tex', u'UsePyramid Documentation',
+  ('index', 'TryPyramid.tex', u'TryPyramid Documentation',
    u'Pylons Project', 'manual'),
 ]
 
@@ -233,7 +233,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'usepyramid', u'UsePyramid Documentation',
+    ('index', 'trypyramid', u'TryPyramid Documentation',
      [u'Pylons Project'], 1)
 ]
 
@@ -247,8 +247,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'UsePyramid', u'UsePyramid Documentation',
-   u'Pylons Project', 'UsePyramid', 'One line description of project.',
+  ('index', 'TryPyramid', u'TryPyramid Documentation',
+   u'Pylons Project', 'TryPyramid', 'One line description of project.',
    'Miscellaneous'),
 ]
 
