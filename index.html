@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/static/ico/favicon.ico">
+
+    <title>Fixed Top Navbar Example for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/bootstrap-3.1.1-dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- SyntaxHighlighter CSS -->
+    <link type="text/css" rel="stylesheet" href="static/syntaxhighlighter_3.0.83/styles/shCoreDefault.css"/>
+
+    <!-- Custom styles for this template -->
+    <!--<link href="navbar-fixed-top.css" rel="stylesheet">-->
+    <style media="screen" type="text/css">
+        body { padding-top: 70px; }
+        #pyramid_logo {margin-top: 20px;}
+    </style>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Try Pyramid</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">Future1</a></li>
+            <li><a href="#contact">Future2</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Future3.1</a></li>
+                <li><a href="#">Future3.2</a></li>
+                <li><a href="#">Future3.3</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Future3.4</a></li>
+                <li><a href="#">Future3.5</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="./">Future4</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <img id="pyramid_logo" src="static/images/pyramid_logo_on_transparent_background_222x213.png" width="222" height="213" alt="Pyramid">
+        </div>
+        <div class="col-md-9">
+            <h1>Try Pyramid</h1>
+            <h3>Start small</h3>
+            <h3>Finish big</h3>
+            <h3>Stay finished</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+        <h3>Pyramid is easy to set up and use.</h3>
+        <p>Let's create a minimal web application in 5 minutes using Python 3.</p>
+        <h4>Install Python</h4>
+        <p>Install the latest Python 3 from <a href="https://www.python.org/downloads/">Python.org</a>.</p>
+        <h4>Install Pyramid</h4>
+        <p>Issue the following commands in a terminal.</p>
+
+<pre class="brush: bash">
+pyvenv myproject
+cd myproject
+bin/pip install pyramid waitress
+</pre>
+
+<h4>Create your first app</h4>
+<p>Using your editor, put the following code into a new file named <code>app.py</code>.</p>
+
+<pre class="brush: python">
+from pyramid.config import Configurator
+from pyramid.response import Response
+from waitress import serve
+
+def hello_world(request):
+    return Response('Hello world!')
+
+def create_app():
+    config = Configurator()
+    config.add_route('hello_world', '/')
+    config.add_view(hello_world, route_name='hello_world')
+
+    app = config.make_wsgi_app()
+    return app
+
+if __name__ == '__main__':
+    app = create_app()
+    serve(app)
+</pre>
+
+<h4>Run your app</h4>
+
+<pre class="brush: bash">
+bin/python app.py
+</pre>
+
+<h4>Open your app</h4>
+
+<p>Visit the URL <a href="http://0.0.0.0:8080">http://0.0.0.0:8080</a> in a web browser.</p>
+
+        </div>
+    </div>
+</div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="static/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="static/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+    <script type="text/javascript" src="static/syntaxhighlighter_3.0.83/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="static/syntaxhighlighter_3.0.83/scripts/shBrushBash.js"></script>
+    <script type="text/javascript">SyntaxHighlighter.all();</script>
+  </body>
+</html>
